@@ -1,0 +1,3 @@
+import { Component, OnInit } from '@angular/core';import { CommonModule } from '@angular/common';import { OrderService } from '../../services/order.service';import { Order } from '../../models/order.model';
+@Component({standalone:true,imports:[CommonModule],template:`<h1>Orders</h1><div class="card" style="padding:20px"><table><tr><th>ID</th><th>User</th><th>Date</th><th>Status</th><th>Total</th></tr><tr *ngFor="let o of orders"><td>#{{o.id}}</td><td>{{o.user_name}}</td><td>{{o.created_at|date:'medium'}}</td><td>{{o.status}}</td><td>{{o.total|currency}}</td></tr></table></div>`})
+export class OrdersAdminComponent implements OnInit{orders:Order[]=[];constructor(private os:OrderService){}ngOnInit(){this.os.all().subscribe(o=>this.orders=o);}}
