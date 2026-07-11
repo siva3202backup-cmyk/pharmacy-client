@@ -1,3 +1,0 @@
-import { Component } from '@angular/core';import { RouterLink, RouterOutlet } from '@angular/router';
-@Component({standalone:true,imports:[RouterOutlet,RouterLink],template:`<section class="section"><div class="container admin"><aside class="card"><h2>Admin</h2><a routerLink="products">Products</a><a routerLink="orders">Orders</a></aside><div><router-outlet></router-outlet></div></div></section>`,styles:[`.admin{display:grid;grid-template-columns:220px 1fr;gap:22px}aside{padding:20px;display:grid;align-content:start;gap:12px}aside a{font-weight:900}@media(max-width:760px){.admin{grid-template-columns:1fr}}`]})
-export class AdminComponent{}

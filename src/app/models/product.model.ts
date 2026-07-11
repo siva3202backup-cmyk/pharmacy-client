@@ -1,2 +1,0 @@
-export interface Product { id:number; name:string; slug?:string; description:string; price:number; sale_price?:number|null; stock:number; image_url:string; category_id:number; category_name?:string; is_featured?:boolean; created_at?:string; }
-export interface ProductPayload { name:string; description:string; price:number; sale_price?:number|null; stock:number; image_url:string; category_id:number; is_featured:boolean; }

@@ -1,2 +1,0 @@
-import { Injectable } from '@angular/core';import { HttpClient } from '@angular/common/http';import { environment } from '../../environments/environment';import { Order, OrderPayload } from '../models/order.model';
-@Injectable({providedIn:'root'}) export class OrderService{private api=`${environment.apiUrl}/orders`;constructor(private http:HttpClient){} create(payload:OrderPayload){return this.http.post<Order>(this.api,payload);} myOrders(){return this.http.get<Order[]>(`${this.api}/my`);} all(){return this.http.get<Order[]>(this.api);}}
