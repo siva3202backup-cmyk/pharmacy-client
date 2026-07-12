@@ -1,1 +1,75 @@
-{"$schema":"./node_modules/@angular/cli/lib/config/schema.json","version":1,"projects":{"pharmacy-client-phase2-5-full":{"projectType":"application","root":"","sourceRoot":"src","prefix":"app","architect":{"build":{"builder":"@angular-devkit/build-angular:application","options":{"outputPath":"dist/pharmacy-client-phase2-5-full","index":"src/index.html","browser":"src/main.ts","polyfills":["zone.js"],"tsConfig":"tsconfig.app.json","inlineStyleLanguage":"scss","assets":[{"glob":"**/*","input":"public"}],"styles":["src/styles.scss"]},"configurations":{"production":{"fileReplacements":[{"replace":"src/environments/environment.ts","with":"src/environments/environment.prod.ts"}],"outputHashing":"all","budgets":[{"type":"initial","maximumWarning":"2MB","maximumError":"4MB"}]},"development":{"optimization":false,"extractLicenses":false,"sourceMap":true}},"defaultConfiguration":"production"},"serve":{"builder":"@angular-devkit/build-angular:dev-server","configurations":{"production":{"buildTarget":"pharmacy-client-phase2-5-full:build:production"},"development":{"buildTarget":"pharmacy-client-phase2-5-full:build:development"}},"defaultConfiguration":"development"}}}},"cli":{"analytics":false}}
+{
+    "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
+    "version": 1,
+    "projects": {
+        "pharmacy-client": {
+            "projectType": "application",
+            "root": "",
+            "sourceRoot": "src",
+            "prefix": "app",
+            "architect": {
+                "build": {
+                    "builder": "@angular-devkit/build-angular:application",
+                    "options": {
+                        "outputPath": "dist/pharmacy-client",
+                        "index": "src/index.html",
+                        "browser": "src/main.ts",
+                        "polyfills": [
+                            "zone.js"
+                        ],
+                        "tsConfig": "tsconfig.app.json",
+                        "inlineStyleLanguage": "scss",
+                        "assets": [
+                            {
+                                "glob": "**/*",
+                                "input": "public"
+                            }
+                        ],
+                        "styles": [
+                            "src/styles.scss"
+                        ]
+                    },
+                    "configurations": {
+                        "production": {
+                            "fileReplacements": [
+                                {
+                                    "replace": "src/environments/environment.ts",
+                                    "with": "src/environments/environment.prod.ts"
+                                }
+                            ],
+                            "outputHashing": "all",
+                            "budgets": [
+                                {
+                                    "type": "initial",
+                                    "maximumWarning": "2MB",
+                                    "maximumError": "4MB"
+                                }
+                            ]
+                        },
+                        "development": {
+                            "optimization": false,
+                            "extractLicenses": false,
+                            "sourceMap": true
+                        }
+                    },
+                    "defaultConfiguration": "production"
+                },
+                "serve": {
+                    "builder": "@angular-devkit/build-angular:dev-server",
+                    "configurations": {
+                        "production": {
+                            "buildTarget": "pharmacy-client:build:production"
+                        },
+                        "development": {
+                            "buildTarget": "pharmacy-client:build:development"
+                        }
+                    },
+                    "defaultConfiguration": "development"
+                }
+            }
+        }
+    },
+    "cli": {
+        "analytics": false
+    }
+}

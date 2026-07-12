@@ -1,1 +1,31 @@
-{"name":"pharmacy-client-phase2-5-full","version":"1.0.0","private":true,"scripts":{"start":"ng serve --host 0.0.0.0 --port 4200","build":"ng build --configuration production","build:dev":"ng build --configuration development"},"dependencies":{"@angular/animations":"^20.0.0","@angular/common":"^20.0.0","@angular/compiler":"^20.0.0","@angular/core":"^20.0.0","@angular/forms":"^20.0.0","@angular/platform-browser":"^20.0.0","@angular/router":"^20.0.0","rxjs":"~7.8.2","tslib":"^2.8.1","zone.js":"~0.15.0"},"devDependencies":{"@angular-devkit/build-angular":"^20.0.0","@angular/cli":"^20.0.0","@angular/compiler-cli":"^20.0.0","typescript":"~5.8.2"}}
+{
+    "name": "pharmacy-client",
+    "version": "1.0.0",
+    "private": true,
+    "scripts": {
+        "start": "ng serve --host 0.0.0.0 --port 4200",
+        "build": "ng build --configuration production",
+        "build:dev": "ng build --configuration development",
+        "docker:build": "docker build -t pharmacy-client .",
+        "docker:run": "docker run -d --name pharmacy-client-container -p 8080:80 pharmacy-client",
+        "docker:stop": "docker stop pharmacy-client-container && docker rm pharmacy-client-container"
+    },
+    "dependencies": {
+        "@angular/animations": "^20.0.0",
+        "@angular/common": "^20.0.0",
+        "@angular/compiler": "^20.0.0",
+        "@angular/core": "^20.0.0",
+        "@angular/forms": "^20.0.0",
+        "@angular/platform-browser": "^20.0.0",
+        "@angular/router": "^20.0.0",
+        "rxjs": "~7.8.2",
+        "tslib": "^2.8.1",
+        "zone.js": "~0.15.0"
+    },
+    "devDependencies": {
+        "@angular-devkit/build-angular": "^20.0.0",
+        "@angular/cli": "^20.0.0",
+        "@angular/compiler-cli": "^20.0.0",
+        "typescript": "~5.8.2"
+    }
+}
